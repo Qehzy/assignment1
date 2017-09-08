@@ -1,90 +1,109 @@
+//VARIABLES
+$primary-color: salmon;
+$background-gradient: #cccccc, white;
+$font: Verdana, Geneva, sans-serif;
+$text-color: #333;
+$link-color: white;
+
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: $font;
     padding: 0;
     margin: 0;
 }
 html{
-    background: red; 
-    background: -webkit-linear-gradient(#CCCCCC, white); 
-    background: -o-linear-gradient(#CCCCCC, white);
-    background: -moz-linear-gradient(#CCCCCC, white); 
-    background: linear-gradient(#CCCCCC, white); 
+    background: white; 
+    background: -webkit-linear-gradient($background-gradient); 
+    background: -o-linear-gradient($background-gradient);
+    background: -moz-linear-gradient($background-gradient); 
+    background: linear-gradient($background-gradient); 
     background: 100%;
 }
 header{
     text-align: center;
     background: whitesmoke;
     color: #333;
-    border-bottom: 1px solid salmon;
+    border-bottom: 2px solid complement($primary-color);
     padding: 10px
 }
 nav {
-    background-color: salmon;
+    background-color: $primary-color;
     padding: 3px;
-    text-align: center; }
+    text-align: center; 
   
-  nav li > a {
-    color: white;
-    text-decoration: none;
-    margin: 2px 10px 2px 10px;
-    padding: 5px;
-    font-family: serif; }
+    li{
+         display: inline;
+         
+        a {
+                     margin: 2px 10px 2px 10px;
+                    padding: 5px;
+                    color: $link-color;
+                    text-decoration: none;
+                   
+                    font-family: serif; 
+                    &:link{
+                        color: $link-color; 
+                    }
+                    &:hover{
+                        color: darken($link-color, 10%); 
+                    }
+                    &:active{
+                        font-weight: bold; 
+                    }
+        }
+     }
+}
   
-  nav ul {
-    list-style-type: none; }
+nav ul {
+    list-style-type: none;
+ }
   
-  nav li {
-    display: inline; }
-    nav a:link {
-        color: white; }
-      
-      nav a:hover {
-        color: lightgrey; }
-      
-      nav a:active {
-        font-weight: bold; }
-        
-    nav font{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
 
-    footer {
-        background-color: salmon;
-        color: #333;
+        
+nav font{
+    font-family: $font;
+}
+
+footer {
+        background-color: $primary-color;
+        color: $text-color;
         text-align: center; 
         min-height: 30px;
         padding: 5px;
+        a{
+            color: $link-color;
+            &:link{
+                color: $link-color;
+            }
+            &:visited{
+                color: $link-color;
+            }
+            &:hover{
+                color: darken($link-color, 10%);
+            }
+            &:active{
+                font-weight: bold;
+            }
+        }
+}
+
+
+figure {
+          
+        display: inline-block;
+        margin: 5px;
+        padding: 5px; }
+          
+        
+#container{
+        width: 960px;
+        text-align: center;
+        margin: 0 auto;
+        min-height: 270px;
+        max-height: 750px;
+        margin-bottom: 15px;
+        padding: 10px;
+        }
+        
+p{
+        color: $text-color;
     }
-
-    footer a:link {
-        color: white; }
-      
-      footer a:visited {
-        color: white; }
-      
-      footer a:hover {
-        color: lightgrey; }
-      
-      footer a:active {
-        font-weight: bold; }
-
-        figure {
-          
-            display: inline-block;
-            margin: 5px;
-            padding: 5px; }
-          
-        
-        #container{
-            width: 960px;
-            text-align: center;
-            margin: 0 auto;
-            min-height: 270px;
-            max-height: 750px;
-            margin-bottom: 15px;
-            padding: 10px;
-        }
-        
-        p{
-            color: #333;
-        }
