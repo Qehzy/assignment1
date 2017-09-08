@@ -20,22 +20,20 @@ header {
 
 nav {
   background-color: salmon;
-  padding: 3px;
-  text-align: center; }
-  nav li {
-    display: inline; }
-    nav li a {
-      margin: 2px 10px 2px 10px;
-      padding: 5px;
-      color: white;
-      text-decoration: none;
-      font-family: serif; }
-      nav li a:link {
-        color: white; }
-      nav li a:hover {
-        color: #e6e6e6; }
-      nav li a:active {
-        font-weight: bold; }
+  text-align: center;
+  padding: 3px; }
+  nav li a {
+    margin: 2px 10px 2px 10px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: serif; }
+    nav li a:link {
+      color: white; }
+    nav li a:hover {
+      color: #e6e6e6; }
+    nav li a:active {
+      font-weight: bold; }
 
 nav ul {
   list-style-type: none; }
@@ -45,8 +43,8 @@ nav font {
 
 footer {
   background-color: salmon;
-  color: #333;
   text-align: center;
+  color: #333;
   min-height: 30px;
   padding: 5px; }
   footer a {
@@ -60,7 +58,7 @@ footer {
     footer a:active {
       font-weight: bold; }
 
-figure {
+figure, nav li {
   display: inline-block;
   margin: 5px;
   padding: 5px; }
